@@ -14,6 +14,10 @@
 		4B0C3A851D1E80C90054BA57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C3A831D1E80C90054BA57 /* LaunchScreen.storyboard */; };
 		4B0C3A901D1E80C90054BA57 /* FullPopSwift2_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C3A8F1D1E80C90054BA57 /* FullPopSwift2_3Tests.swift */; };
 		4B0C3A9B1D1E80C90054BA57 /* FullPopSwift2_3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C3A9A1D1E80C90054BA57 /* FullPopSwift2_3UITests.swift */; };
+		4B0C3AAA1D1E80DE0054BA57 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C3AA81D1E80DE0054BA57 /* CustomNavigationController.swift */; };
+		4B0C3AAB1D1E80DE0054BA57 /* NavigationControllerFullScreenPopExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C3AA91D1E80DE0054BA57 /* NavigationControllerFullScreenPopExtension.swift */; };
+		4B0C3AAD1D1E820F0054BA57 /* Test1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C3AAC1D1E820F0054BA57 /* Test1Controller.swift */; };
+		4B0C3AAF1D1E821C0054BA57 /* Test2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C3AAE1D1E821C0054BA57 /* Test2Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		4B0C3A961D1E80C90054BA57 /* FullPopSwift2.3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FullPopSwift2.3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B0C3A9A1D1E80C90054BA57 /* FullPopSwift2_3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPopSwift2_3UITests.swift; sourceTree = "<group>"; };
 		4B0C3A9C1D1E80C90054BA57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B0C3AA81D1E80DE0054BA57 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		4B0C3AA91D1E80DE0054BA57 /* NavigationControllerFullScreenPopExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerFullScreenPopExtension.swift; sourceTree = "<group>"; };
+		4B0C3AAC1D1E820F0054BA57 /* Test1Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test1Controller.swift; sourceTree = "<group>"; };
+		4B0C3AAE1D1E821C0054BA57 /* Test2Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test2Controller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,8 @@
 			children = (
 				4B0C3A7A1D1E80C80054BA57 /* AppDelegate.swift */,
 				4B0C3A7C1D1E80C80054BA57 /* ViewController.swift */,
+				4B0C3AB01D1E82C50054BA57 /* 使用分类 */,
+				4B0C3AB11D1E82D00054BA57 /* 使用自定义 */,
 				4B0C3A7E1D1E80C80054BA57 /* Main.storyboard */,
 				4B0C3A811D1E80C90054BA57 /* Assets.xcassets */,
 				4B0C3A831D1E80C90054BA57 /* LaunchScreen.storyboard */,
@@ -123,6 +133,24 @@
 				4B0C3A9C1D1E80C90054BA57 /* Info.plist */,
 			);
 			path = FullPopSwift2.3UITests;
+			sourceTree = "<group>";
+		};
+		4B0C3AB01D1E82C50054BA57 /* 使用分类 */ = {
+			isa = PBXGroup;
+			children = (
+				4B0C3AAC1D1E820F0054BA57 /* Test1Controller.swift */,
+				4B0C3AA91D1E80DE0054BA57 /* NavigationControllerFullScreenPopExtension.swift */,
+			);
+			name = "使用分类";
+			sourceTree = "<group>";
+		};
+		4B0C3AB11D1E82D00054BA57 /* 使用自定义 */ = {
+			isa = PBXGroup;
+			children = (
+				4B0C3AAE1D1E821C0054BA57 /* Test2Controller.swift */,
+				4B0C3AA81D1E80DE0054BA57 /* CustomNavigationController.swift */,
+			);
+			name = "使用自定义";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B0C3AAA1D1E80DE0054BA57 /* CustomNavigationController.swift in Sources */,
+				4B0C3AAD1D1E820F0054BA57 /* Test1Controller.swift in Sources */,
+				4B0C3AAF1D1E821C0054BA57 /* Test2Controller.swift in Sources */,
 				4B0C3A7D1D1E80C80054BA57 /* ViewController.swift in Sources */,
+				4B0C3AAB1D1E80DE0054BA57 /* NavigationControllerFullScreenPopExtension.swift in Sources */,
 				4B0C3A7B1D1E80C80054BA57 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +437,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZeroJ.FullPopSwift2-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -416,6 +449,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZeroJ.FullPopSwift2-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -484,6 +518,7 @@
 				4B0C3AA11D1E80C90054BA57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B0C3AA21D1E80C90054BA57 /* Build configuration list for PBXNativeTarget "FullPopSwift2.3Tests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +527,7 @@
 				4B0C3AA41D1E80C90054BA57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B0C3AA51D1E80C90054BA57 /* Build configuration list for PBXNativeTarget "FullPopSwift2.3UITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +536,7 @@
 				4B0C3AA71D1E80C90054BA57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
