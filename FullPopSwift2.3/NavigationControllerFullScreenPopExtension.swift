@@ -125,6 +125,7 @@ class ZJNavigationControllerInteractiveTransition: UIPercentDrivenInteractiveTra
     }
 
 }
+
 class ZJNavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
     let animator = ZJNavigationControllerAnimator()
     let interactive = ZJNavigationControllerInteractiveTransition()
@@ -138,10 +139,12 @@ class ZJNavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
         interactive.navigationController = navigationController
         
         animator.operation = operation
+        animator.isInteractingAnimation = false
         return animator
     }
     
     func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        animator.isInteractingAnimation = interactive.isInteracting
         return interactive.isInteracting ? interactive : nil
         
     }
@@ -155,7 +158,7 @@ class ZJNavigationControllerAnimator: NSObject, UIViewControllerAnimatedTransiti
 
     let duration = 0.35
     var operation: UINavigationControllerOperation = .None
-    
+    var isInteractingAnimation = false
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return duration
         
@@ -205,7 +208,9 @@ class ZJNavigationControllerAnimator: NSObject, UIViewControllerAnimatedTransiti
         }
         
         //options - 应该使用匀速, 否则 交互动画的时候动画进度偏差较大
-        UIView.animateWithDuration(duration, delay: 0.0, options: [.CurveLinear], animations: {
+        
+        let options = isInteractingAnimation ? UIViewAnimationOptions.CurveLinear : UIViewAnimationOptions.CurveEaseInOut
+        UIView.animateWithDuration(duration, delay: 0.0, options: options, animations: {
             if self.operation == .Push {
                 toView.frame = visibleFrame
                 fromView.frame = leftHiddenFrame
